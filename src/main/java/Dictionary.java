@@ -38,7 +38,6 @@ public class Dictionary {
 
         // for each word in dictionary
         for (String word : dictionary) {
-            //System.out.println(word);
 
             // match flag
             Boolean nonMatch = true;
@@ -48,6 +47,7 @@ public class Dictionary {
 
                 // if the count of chW in word is equal to its count in input,
                 // then, they are match
+
                 if (word.length() - word.replace(w, "").length() !=
                         input.length() - input.replace(w, "").length()) {
                     nonMatch = false;
