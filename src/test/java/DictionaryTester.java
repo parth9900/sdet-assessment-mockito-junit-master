@@ -28,7 +28,8 @@ public class DictionaryTester {
         dictionary = new Dictionary();
         dictService = mock(DictionaryService.class);
         dictionary.setDictionaryService(dictService);
-        // I'm adding a mocked dictionary here
+
+        // adding a mocked dictionary
         when(dictService.getDictionary()).thenReturn(createDictionaryArray());
         dictionaryList = dictService.getDictionary();
     }
@@ -45,7 +46,6 @@ public class DictionaryTester {
             ClassLoader loader = DictionaryTester.class.getClassLoader();
             File file = new File(loader.getResource("EnglishWords").getFile());
             reader = new BufferedReader(new FileReader(file));
-            //reader = new BufferedReader(new FileReader("EnglishWords"));
             String line = reader.readLine();
             while (line != null) {
                 listDictionary.add(line);
