@@ -74,9 +74,9 @@ public class DictionaryTester {
     }
 
     @Test
-    public void validatePapiWord() {
-        when(dictService.isEnglishWord("PAPI")).thenReturn(isThisEnglish("PAPI"));
-        Assert.assertTrue(dictionary.isEnglishWord("PAPI"));
+    public void validateMyName() {
+        when(dictService.isEnglishWord("PARTH")).thenReturn(isThisEnglish("PARTH"));
+        Assert.assertTrue(dictionary.isEnglishWord("PARTH"));
     }
 
     @Test
